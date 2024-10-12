@@ -45,7 +45,7 @@ const inputText = args.join(" ").trim().replace(/\s+/g, " ").replace(/(\s+\|)/g,
       fs.writeFileSync(pathSave, Buffer.from(imageBuffer));
       api.sendMessage(
         {
-    body: `✅Your Cover was created by Sakibin Server at ${time}🔖`,
+    body: `✅Your Cover was created by X2 Bot at ${time}🔖`,
           attachment: fs.createReadStream(pathSave),
         },
         event.threadID,
@@ -59,6 +59,6 @@ const inputText = args.join(" ").trim().replace(/\s+/g, " ").replace(/(\s+\|)/g,
       } else {
         err = error;
       }
-      return api.sendMessage("ERROR ❌\nSAKIBIN Server Busy😓", event.threadID, event.messageID);
+      return api.sendMessage("ERROR ❌\nX2 Bot Is Busy😓", event.threadID, event.messageID);
     });
 };
