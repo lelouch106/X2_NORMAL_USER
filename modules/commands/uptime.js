@@ -131,9 +131,9 @@ registerFont(__dirname + `/cache/CaviarDreams.ttf`, {
     });
     ctx.textAlign = "start";
     ctx.font = "55px time";
-    ctx.fillText("𝗦𝗮𝗸𝗶𝗯𝗶𝗻 𝗦𝗶𝗻𝗵𝗮", 930, 540)
-    ctx.fillText("𝗦𝗮𝗸𝗶𝗯𝗶𝗻 𝗦𝗶𝗻𝗵𝗮", 930, 610)
-    ctx.fillText("𝗦𝗮𝗸𝗶𝗯𝗶𝗻 𝗦𝗶𝗻𝗵𝗮", 930, 690)
+    ctx.fillText("HamimX2", 930, 540)
+    ctx.fillText("HamimX2", 930, 610)
+    ctx.fillText("HamimX2", 930, 690)
     ctx.restore();
     ctx.save();
     ctx.beginPath();
