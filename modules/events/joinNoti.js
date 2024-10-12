@@ -32,7 +32,7 @@ module.exports.run = async function({ api, event }) {
 	if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
 		api.changeNickname(`⪼ ${global.config.PREFIX} ⪻• ${(!global.config.BOTNAME) ? "bot" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
 		const fs = require("fs");
-		return api.sendMessage("", event.threadID, () => api.sendMessage({body:`▂▃▅▆𝗟𝗼𝗮𝗱𝗶𝗻𝗴...𝟭𝟬𝟬%▆▅▃▂\n⫸ 𝘾𝙤𝙣𝙣𝙚𝙘𝙩𝙚𝙙 𝙎𝙪𝙘𝙘𝙚𝙨𝙁𝙪𝙡𝙡 ⫷\n\n❐ 🄱🄾🅃 Prefix: /\n❐Example: /help\n───────────⭓\n│👤Owner:【𝗦𝗮𝗸𝗶𝗯𝗶𝗻 𝗦𝗶𝗻𝗵𝗮】\n│⚠️Don't kick this Bot!\n│✅Use /help to see CMD?\n│💟Thanks GC Admin for Add!\n│❄️I have no Spam!\n`, attachment: fs.createReadStream(__dirname + "/cache/connect.gif")} ,threadID));
+		return api.sendMessage("", event.threadID, () => api.sendMessage({body:`▂▃▅▆𝗟𝗼𝗮𝗱𝗶𝗻𝗴...𝟭𝟬𝟬%▆▅▃▂\n⫸ 𝘾𝙤𝙣𝙣𝙚𝙘𝙩𝙚𝙙 𝙎𝙪𝙘𝙘𝙚𝙨𝙁𝙪𝙡𝙡 ⫷\n\n❐ 🄱🄾🅃 Prefix: /\n❐Example: /help\n───────────⭓\n│👤Owner:【 HAMIMX2 】\n│⚠️Don't kick this Bot!\n│✅Use /help to see CMD?\n│💟Thanks GC Admin for Add!\n│❄️I have no Spam!\n`, attachment: fs.createReadStream(__dirname + "/cache/connect.gif")} ,threadID));
 	}
 	else {
 		try {
@@ -53,7 +53,7 @@ module.exports.run = async function({ api, event }) {
 			}
 			memLength.sort((a, b) => a - b);
 			
-			(typeof threadData.customJoin == "undefined") ? msg = "✧ Welcome to \n{threadName}.\n✧ {name} You are {soThanhVien} No. Member!\n✧ Join our group: https://www.facebook.com/groups/418505760810575" : msg = threadData.customJoin;
+			(typeof threadData.customJoin == "undefined") ? msg = "✧ Welcome to \n{threadName}.\n✧ {name} You are {soThanhVien} No. Member!\n✧ This Bot Owner is : Hamim Hosenx" : msg = threadData.customJoin;
 			msg = msg
 			.replace(/\{name}/g, nameArray.join(', '))
 			.replace(/\{type}/g, (memLength.length > 1) ?  'You' : 'Friend')
