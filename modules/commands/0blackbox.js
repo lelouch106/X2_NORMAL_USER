@@ -2,7 +2,7 @@ const axios = require("axios");
 const API = global.config.ApiUrl;
 
 module.exports.config = {
-    name: "miuki",
+    name: "mam",
     version: "1.0",
     hasPermission: 0,
     credits: "Sakibin",
@@ -16,7 +16,7 @@ module.exports.run = async ({ api, event, args }) => {
     try {
         let message = args.join(" ");
         if (!message) {
-            return api.sendMessage(`⭓ Hi, I'm Meta 2.0⚡\n⭓ My official Database created by @Sakibin Sinha 🚀`, event.threadID, (error, info) => {
+            return api.sendMessage(`⭓ Hi, I'm Meta 2.0⚡\n⭓ My official Database created by @Sakibin Sinha But I am using by Master X2 🚀`, event.threadID, (error, info) => {
                 global.client.handleReply.push({
                     name: this.config.name,
                     messageID: info.messageID,
@@ -27,7 +27,7 @@ module.exports.run = async ({ api, event, args }) => {
         }
 
         // Initial placeholder message while the response is being fetched
-        api.sendMessage("Miuki is Thinking...", event.threadID, (error, info) => {
+        api.sendMessage("Your Mam is Thinking...", event.threadID, (error, info) => {
             const botMessageID = info.messageID;  // Capture the bot's message ID
 
             // Fetch the response from the API
