@@ -43,7 +43,7 @@ const login = require("fca-sakibin-new");
 const axios = require("axios");
 const listPackage = JSON.parse(readFileSync('./package.json')).dependencies;
 const listbuiltinModules = require("module").builtinModules;
-console.log(chalk.bold.hex("#00FF00").bold("•═[SAKIBIN 5.1]═>") + chalk.bold.hex("#00FF00").bold("Initializing variables..."));
+console.log(chalk.bold.hex("#00FF00").bold("•═[HAMIMX2 5.1]═>") + chalk.bold.hex("#00FF00").bold("Initializing variables..."));
 
 global.client = new Object({
     commands: new Map(),
