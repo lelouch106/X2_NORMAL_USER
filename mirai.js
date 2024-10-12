@@ -423,7 +423,7 @@ loginApiData.setOptions(global.config.FCAOption)
         botData.models = models
         onBot(botData);
     } catch (error) { logger(global.getText('mirai', 'successConnectDatabase', JSON.stringify(error)), '[ DATABASE ]'); }
-console.log(chalk.bold.hex("#00FFFF").bold("•══════[STARTING SAKIBIN SERVER]══════•"));
+console.log(chalk.bold.hex("#00FFFF").bold("•══════[STARTING HAMIM SERVER]══════•"));
    
 })();
 process.on('unhandledRejection', (err, p) => {});
