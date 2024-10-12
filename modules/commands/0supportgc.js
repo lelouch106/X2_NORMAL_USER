@@ -11,7 +11,7 @@ module.exports.config = {
     cooldowns: 5
 };
 
-const allowedGroups = ['9346480742035558', '5683041128473731']; // Only allow these groups
+const allowedGroups = ['6863953243663248']; // Only allow these groups
 
 module.exports.onLoad = () => {
   console.log(chalk.bold.hex("#00c300").bold("==== SUCCESSFULLY LOADED THE JOIN COMMAND ====="));
