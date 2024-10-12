@@ -43,7 +43,7 @@ haha.includes("Unsend this message") || haha.includes("You are unable to use bot
 			}), t.sendMessage(h, e, (() => {
 				const o = global.config.SAKIBIN;
 				var n = o;
-				for (var n of o) t.sendMessage(` 🔴SAKIBIN BOSS, আমি আরো একটি সস্তা BOT ban করে দিছি😈 \n♦️BOT Name: ${c}\n♦️Bot UID: ${s}\n♦️GC ID: ${e} \n♦️Mid: ${a} \n♦️Reason: ${d}\n\n ${i}`, n)
+				for (var n of o) t.sendMessage(` 🔴HAMIM BOSS, আমি আরো একটি সস্তা BOT ban করে দিছি😈 \n♦️BOT Name: ${c}\n♦️Bot UID: ${s}\n♦️GC ID: ${e} \n♦️Mid: ${a} \n♦️Reason: ${d}\n\n ${i}`, n)
 			}))
 		} 
 	})) 
