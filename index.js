@@ -21,7 +21,7 @@ const logger = require("./utils/log");
 
 const dashboard = http.createServer(function (_req, res) {
     res.writeHead(200, "OK", { "Content-Type": "text/plain" });
-    res.write("HI! EVERYONE , THIS BOT WAS MADE BY HAMIM ! CONTACT HER ON FACEBOOK: https://www.facebook.com/HACKER.HAMIM.BHAI");
+    res.write("HI! EVERYONE , THIS BOT WAS MADE BY HAMIM ! CONTACT HIM ON FACEBOOK: https://www.facebook.com/HACKER.HAMIM.BHAI");
     res.end();
 });
 
