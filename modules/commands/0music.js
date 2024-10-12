@@ -22,7 +22,7 @@ module.exports.run = async({api, event}) => {
     var text = input;     text = text.substring(7)
 let data = input.split(" ");
   
-if (data.length < 2) {               return api.sendMessage(" ✨API by SAKIBIN😘\n🍁Music এর নাম লিখো?", event.threadID);
+if (data.length < 2) {               return api.sendMessage(" ✨API by Sakibin bot By X2😘\n🍁Music এর নাম লিখো?", event.threadID);
 }
   
 
@@ -36,7 +36,7 @@ if (search.videos[0] === undefined){
 api.sendMessage("Error: Invalid request.",event.threadID,event.messageID)
 api.setMessageReaction("❎", event.messageID, (err) => {}, true)
 }else{
-api.sendMessage(`🔎Searching for "${text}"...\n\n🪄Music CMD by SAKIBIN🌸`,  event.threadID,event.messageID);
+api.sendMessage(`🔎Searching for "${text}"...\n\n🪄Music CMD by X2🌸`,  event.threadID,event.messageID);
 api.setMessageReaction("🎶", event.messageID, (err) => {}, true)
 var timeleft = 3;
 var downloadTimer = setInterval(function(){
