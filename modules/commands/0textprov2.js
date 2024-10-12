@@ -22,7 +22,7 @@ module.exports.run = async function ({ api, event, args }) {
   
   if (!inputText) {
     api.setMessageReaction("❌", event.messageID, (err) => {}, true);
-    return api.sendMessage("Note: সঠিক ভাবে লিখুন। যেমন..\n/textpro 1 Sakib", event.threadID);
+    return api.sendMessage("Note: সঠিক ভাবে লিখুন। যেমন..\n/textpro 1 Hamim", event.threadID);
   }
 
   // Set initial reaction indicating the start of the process
@@ -69,7 +69,7 @@ module.exports.run = async function ({ api, event, args }) {
 
     await api.sendMessage({
       attachment: imgData,
-      body: `🔥Here is your edited image (${startNumber} to ${endNumber})\n🖥️API and CMD Make by @Sakibin to ${time}`,
+      body: `🔥Here is your edited image (${startNumber} to ${endNumber})\n🖥time ${time}`,
     }, event.threadID, event.messageID);
 
     // Clean up the image files
