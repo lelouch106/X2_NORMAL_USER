@@ -25,7 +25,7 @@ const axios = require('axios')
     };
     const { loadImage, createCanvas, registerFont } = require("canvas");
     let path = __dirname + "/cache/atmaraxy.png";
-    let bg = (await axios.get(`https://i.imgur.com/j6oeXJs.png`, {responseType: "arraybuffer" })).data;
+    let bg = (await axios.get(`https://ibb.co/tDj0b1n`, {responseType: "arraybuffer" })).data;
     fs.writeFileSync(path, Buffer.from(bg, "utf-8"));
     let bgBase = await loadImage(path);
     let canvas = createCanvas(bgBase.width, bgBase.height);
@@ -83,11 +83,11 @@ module.exports.run = async ({ event, api, Currencies, args, Users, permssion }) 
       writeFileSync(pathData, JSON.stringify(dataJson, null, 4), "utf-8");
       return api.sendMessage(`[ SUCCESS ] ➜ You have successfully registered, your account number is ${stk}, we give you 500000$ and then you have to deposit at least 500000$ to get profit💰\n[ ${timeNow} ]`, threadID, messageID)
     }
-    else return api.sendMessage(`[ WARNING ] ➜ You already have an account on the system SAKIBIN Bank🏦`, threadID, messageID)
+    else return api.sendMessage(`[ WARNING ] ➜ You already have an account on the system X2 Bank🏦`, threadID, messageID)
   }
   if (args[0] == "loan") {
     if (userData.vay.solan == 5 || userData.status == false) { return api.sendMessage(`[ WARNING ] ➜ Did you ${userData.vay.solan == 5 ? "reached the number of loans of 5": "having bad debt"} reached the number of loans of 5": "having bad debt so cannot continue to borrow`, threadID, messageID) }
-    if (!dataJson.find(i => i.senderID == senderID)) { return api.sendMessage(`[ WARNING ] ➜ You do not have an account on the system yet SAKIBIN Bank🏦\n[ ${timeNow} ]`, threadID) }
+    if (!dataJson.find(i => i.senderID == senderID)) { return api.sendMessage(`[ WARNING ] ➜ You do not have an account on the system yet X2 Bank🏦\n[ ${timeNow} ]`, threadID) }
     if (isNaN(args[1]) || !args[1]) { return api.sendMessage(`[ WARNING ] ➜ The amount you entered is incorrect`, threadID) }
     if (args[1] < 500000 || args[1] > 50000000000000) { return api.sendMessage(`[ WARNING ] ➜ The amount you enter ${args[1] < 500000 ? "Less" : "Bigger"} our loan request level`, threadID) }
     else {
@@ -105,7 +105,7 @@ module.exports.run = async ({ event, api, Currencies, args, Users, permssion }) 
     }
   }
   if (args[0] == "pay") {
-    if (!dataJson.find(i => i.senderID == senderID)) { return api.sendMessage(`[ WARNING ] ➜ You do not have an account on the system yet SAKIBIN Bank🏦\n[ ${timeNow} ]`, threadID) }
+    if (!dataJson.find(i => i.senderID == senderID)) { return api.sendMessage(`[ WARNING ] ➜ You do not have an account on the system yet X2 Bank🏦\n[ ${timeNow} ]`, threadID) }
     if (isNaN(args[1]) || !args[1]) { return api.sendMessage(`[ WARNING ] ➜ The amount you entered is incorrect`, threadID) }
     const tra_v = parseInt(userData.vay.sotien) - parseInt(args[1]);
     if (tra_v < -1) { return api.sendMessage(`[ WARNING ] ➜ The amount you pay for your loan is greater than the amount you borrowed before, please pay in full ${replace(parseInt(userData.vay.sotien))}$`, threadID, messageID) }
@@ -222,15 +222,15 @@ module.exports.run = async ({ event, api, Currencies, args, Users, permssion }) 
       if (!dataJson.find(i => i.senderID == senderID)) { return api.sendMessage('[ WARNING ] ➜ Unregistered users use banking, banking register to register🏦', threadID, messageID) }
       var userMoney = userData.money;
       var userStk = userData.stk;
-      return makeimg(userMoney).then(path => api.sendMessage({ body: `[ SUCCESS ] ➜ The amount you are depositing with SAKIBIN Bank.\n💵➜ Balance: ${replace(userMoney)}$\n🕔➜ Join Date: ${userData.time}\n💹➜ Accuracy ${userData.status}\n👤➜ Account number To be: ${userStk}\n🤑➜ Interest: +${laisuat * 100}% in ${12000 / 60} minute`, attachment: createReadStream(path) }, threadID, () => unlinkSync(path), messageID));
+      return makeimg(userMoney).then(path => api.sendMessage({ body: `[ SUCCESS ] ➜ The amount you are depositing with X2 Bank.\n💵➜ Balance: ${replace(userMoney)}$\n🕔➜ Join Date: ${userData.time}\n💹➜ Accuracy ${userData.status}\n👤➜ Account number To be: ${userStk}\n🤑➜ Interest: +${laisuat * 100}% in ${12000 / 60} minute`, attachment: createReadStream(path) }, threadID, () => unlinkSync(path), messageID));
     }
   } else {
-    const t = (await axios.get(`https://i.imgur.com/9Juopfv.png`, {
+    const t = (await axios.get(`https://ibb.co/tDj0b1n`, {
       responseType: "stream"
     })).data;
 
     return api.sendMessage({
-      body: "🏦⚜️𝗦𝗔𝗞𝗜𝗕𝗜𝗡 𝗕𝗔𝗡𝗞⚜️🏦\n•━━━━━━━━━━━━━━━━•\n®️➜ register - register sakibin bank\n💹➜ trade - deposit money Sakibin bank to make profit\n🏧➜ cashout - withdraw money from Sakibin bank\n🧾➜ check - show information banking\n💸➜ pay - transfer money to others\n💰➜ loan - take loan (not recommended)\n💵➜ repay - repay loan",
+      body: "🏦⚜️X2 BANK⚜️🏦\nSERVER BY : SAKIBIN\n•━━━━━━━━━━━━━━━━•\n®️➜ register - register in X2 bank\n💹➜ trade - deposit money in X2 bank to make profit\n🏧➜ cashout - withdraw money from X2 bank\n🧾➜ check - show information banking\n💸➜ pay - transfer money to others\n💰➜ loan - take loan (not recommended)\n💵➜ repay - repay loan",
       attachment: t
     }, threadID)
   }
@@ -273,19 +273,19 @@ module.exports.handleReaction = async function({ event, api, handleReaction, Cur
     var userstk = userData.stk;
     var money = userData.money;
     if (handleReaction.type == "check") {
-      return makeimg(userMoney).then(path => api.sendMessage({ body: `[ SUCCESS ] ➜ Amount of money ${userData.name} sending SAKIBIN Bank To be: ${replace(userMoney)}$\n➜ Join Date: ${userData.time}\n➜ Accuracy ${userData.status}\n➜ The account number is: ${userstk}\n➜ Interest: +${laisuat * 100}% in ${12000 / 60} minute`, attachment: createReadStream(path) }, event.threadID, () => unlinkSync(path), event.messageID));
+      return makeimg(userMoney).then(path => api.sendMessage({ body: `[ SUCCESS ] ➜ Amount of money ${userData.name} sending X2 Bank To be: ${replace(userMoney)}$\n➜ Join Date: ${userData.time}\n➜ Accuracy ${userData.status}\n➜ The account number is: ${userstk}\n➜ Interest: +${laisuat * 100}% in ${12000 / 60} minute`, attachment: createReadStream(path) }, event.threadID, () => unlinkSync(path), event.messageID));
     }
     if (handleReaction.type == "trade") {
       userData.money = parseInt(userMoney) + parseInt(handleReaction.send);
       writeFileSync(pathData, JSON.stringify(dataJson, null, 4), "utf-8");
       await Currencies.decreaseMoney(event.userID, parseInt(handleReaction.send))
-      return api.sendMessage(`[ SUCCESS ] ➜ You have sent ${replace(handleReaction.send)}$ enter SAKIBIN Bank\n💷 Interest: +${laisuat * 100}% in ${timeIM / 60} minute\n[ ${timeNow} ]`, event.threadID)
+      return api.sendMessage(`[ SUCCESS ] ➜ You have sent ${replace(handleReaction.send)}$ enter X2 Bank\n💷 Interest: +${laisuat * 100}% in ${timeIM / 60} minute\n[ ${timeNow} ]`, event.threadID)
     }
     if (handleReaction.type == "rut") {
       userData.money = parseInt(userMoney) - parseInt(handleReaction.send);
       writeFileSync(pathData, JSON.stringify(dataJson, null, 4), "utf-8");
       await Currencies.increaseMoney(event.userID, parseInt(handleReaction.send))
-      return api.sendMessage(`[ SUCCESS ] ➜ You have withdrawn ${replace(handleReaction.send)}$ from Sakibin Bank\n[ ${timeNow} ]`, event.threadID)
+      return api.sendMessage(`[ SUCCESS ] ➜ You have withdrawn ${replace(handleReaction.send)}$ from X2 Bank\n[ ${timeNow} ]`, event.threadID)
     }
     if (handleReaction.type == "pay") {
       var userStk = dataJson.find(i => i.stk == handleReaction.stk)
