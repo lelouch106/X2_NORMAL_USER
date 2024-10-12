@@ -19,7 +19,7 @@ module.exports.run = async function ({ api, event, args }) {
 	const out = msg => api.sendMessage(msg, threadID, messageID);
 	var { participantIDs, approvalMode, adminIDs } = await api.getThreadInfo(threadID);
 	var participantIDs = participantIDs.map(e => parseInt(e));
-	if (!args[0]) return out("🟥Please enter 1 id/link profile user need to add.\n🪄✨CMD by SAKIBIN🌺");
+	if (!args[0]) return out("🟥Please enter 1 id/link profile user need to add.\n🪄✨CMD by X2🌺");
 	if (!isNaN(args[0])) return adduser(args[0], undefined);
 	else {
 		try {
@@ -36,7 +36,7 @@ module.exports.run = async function ({ api, event, args }) {
 
 	async function adduser(id, name) {
 		id = parseInt(id);
-		if (participantIDs.includes(id)) return out(`${name ? name : "Member"} are already in the group.✅\n🌸CMD by SAKIBIN🪄✨`);
+		if (participantIDs.includes(id)) return out(`${name ? name : "Member"} are already in the group.✅\n🌸CMD by X2🪄✨`);
 		else {
 			var admins = adminIDs.map(e => parseInt(e.id));
 			try {
@@ -45,7 +45,7 @@ module.exports.run = async function ({ api, event, args }) {
 			catch {
 				return out(`Can't add ${name ? name : "user"} to group❎`);
 			}
-			if (approvalMode === true && !admins.includes(botID)) return out(`Add ${name ? name : "member"} to the approved list!❎✅\n🌸CMD by Sakibin🪄✨`);
+			if (approvalMode === true && !admins.includes(botID)) return out(`Add ${name ? name : "member"} to the approved list!❎✅\n🌸CMD by X2🪄✨`);
 			else return out(`Added ${name ? name : "member"} to group!✅\n🌸CMD by Sakibin🪄✨`)
 		}
 	}
