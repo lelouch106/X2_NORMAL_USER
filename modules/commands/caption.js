@@ -1,12 +1,10 @@
 module.exports.config = {
   name: "caption",
   version: "1.0.0",
-  permssion: 0,
-  prefix: true,
-  premium: false,
+  hasPermssion: 0,
   credits: "Hamim",
   description: "Captions collected by HAMIM",
-  category: "X2",
+  commandCategory: "X2",
   usages: "caption",
   cooldowns: 4,
   dependencies: {
