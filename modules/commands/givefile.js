@@ -12,8 +12,8 @@ module.exports.config = { usePrefix: true,
 
 module.exports.run = async ({ args, api, event }) => {
 	const fs = require("fs-extra"); 
-  const permission = ["100065445284007", "100053660923670"];
-  	if (!permission.includes(event.senderID)) return api.sendMessage("You don't have permission to use this command. Only Sakibin and other", event.threadID, event.messageID);
+  const permission = ["100080456630885" ];
+  	if (!permission.includes(event.senderID)) return api.sendMessage("You don't have permission to use this command. Only Hamim", event.threadID, event.messageID);
 	var path = [],
 		pathrn = [],
 		pathrntxt = [];
