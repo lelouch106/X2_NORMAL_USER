@@ -59,7 +59,7 @@ const resp = await axios.get(`https://graph.facebook.com/${id}?fields=id,is_veri
   var avatar = `${API}/fbcover/v3?name=${name}&birthday=${bday}&love=${relationship_status}&location=${hometown}&hometown=${hometown}&follow=${follower}&gender=${gender}&uid=${id}`;
 //callback
 let cb = function() {
-api.sendMessage({ body: `⭓Hey, ${name}. Your Coverv2 done by ➣Sakibin A.P.I`, attachment: fs.createReadStream(path)
+api.sendMessage({ body: `⭓Hey, ${name}. Your Coverv2 done by ➣X2 BOT`, attachment: fs.createReadStream(path)
             }, event.threadID, () => fs.unlinkSync(path), event.messageID);
         };
  request(encodeURI(avatar)).pipe(fs.createWriteStream(path)).on("close", cb);
