@@ -16,7 +16,7 @@ module.exports.run = async ({ api, event, args }) => {
     try {
      let prompt = args.join("");
         if (!prompt) {
-            return api.sendMessage(`➤ Hi, I'm MR. Black from Sakibin D-Base..🎩`, event.threadID, event.messageID);
+            return api.sendMessage(`➤ Hi, I'm MR. Black I am Running By X2 D-Base..🎩`, event.threadID, event.messageID);
         }
 
         const response = await axios.get(`${APIUrl}/api/blackbox?prompt=${prompt}&apikey=SAKIBIN-FREE-SY6B4X`);
