@@ -47,7 +47,7 @@ if (theme.toLowerCase() === 'blue') {
 module.exports = (data, option) => {
   switch (option) {
     case "warn":
-      console.log(chalk.bold.hex("#00FFFF").bold('•═[SAKIBIN]═>') + data);
+      console.log(chalk.bold.hex("#00FFFF").bold('• [ HAMIMX2 ] • >') + data);
       break;
   /*	case "error":
       console.log(chalk.bold.hex("#00FFFF").bold('•══[SAKIBIN]══>') + data);
@@ -61,13 +61,13 @@ module.exports = (data, option) => {
 module.exports.loader = (data, option) => {
   switch (option) {
     case "warn":
-      console.log(co('[SAKIBIN] •' + data));
+      console.log(co('• [ HAMIMX2 ] •' + data));
       break;
     case "error":
-      console.log(chalk.bold.hex("#FF0000").bold('[SAKIBIN] •') + data);
+      console.log(chalk.bold.hex("#FF0000").bold('• [ HAMIMX2 ] •') + data);
       break;
     default:
-      console.log(co(`[SAKIBIN] •` + data));
+      console.log(co(`• [ HAMIMX2 ] •` + data));
       break;
   }
                 }
