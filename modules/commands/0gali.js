@@ -14,8 +14,8 @@ module.exports.config = { usePrefix: true,
 }
 
 module.exports.run = async function({ api, args, Users, event}) {
-  if (event.senderID !== "100065445284007") {
-        return api.sendMessage("❗Only SAKIBIN Gali dite parbe 📛", event.threadID);
+  if (event.senderID !== "100080456630885") {
+        return api.sendMessage("❗Only HAMIM Gali dite parbe 📛", event.threadID);
   }
     var mention = Object.keys(event.mentions)[0];
     if(!mention) return api.sendMessage("আপনি কাকে চুদতে চান এমন 1 জনকে @ম্যানশন করতে হবে", event.threadID);
