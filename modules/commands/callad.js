@@ -35,7 +35,7 @@ module.exports.config = { usePrefix: true,
 			break;
 		case "calladmin":
 			e.sendMessage({
-				body: `📌Reply from Owner ${i} to you:\n❗Sakibin:\n${a.body}\n\n»💬Reply to this message to continue sending reports to admin`,
+				body: `📌Reply from Owner ${i} to you:\n❗Hamim:\n${a.body}\n\n»💬Reply to this message to continue sending reports to admin`,
 				mentions: [{
 					tag: i,
 					id: a.senderID
@@ -60,7 +60,7 @@ module.exports.config = { usePrefix: true,
 		d = n.threadID;
 	let r = (await o.getData(n.threadID)).threadInfo;
 	var l = require("moment-timezone").tz("Asia/Dhaka").format("HH:mm:ss D/MM/YYYY");
-	e.sendMessage(`📜Your Report has been sent to Admin Sakibin✅ \nTime: ${l}`, n.threadID, (() => {
+	e.sendMessage(`📜Your Report has been sent to Admin Hamim✅ \nTime: ${l}`, n.threadID, (() => {
 		var s = global.config.SAKIBIN;
 		for (let o of s) {
 			let s = r.threadName;
