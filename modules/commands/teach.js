@@ -1,4 +1,4 @@
-const API = global.config.ApiUrl;
+const API = global.config.ApiUrlX2;
 const axios = require("axios");
 
 module.exports.config = {
