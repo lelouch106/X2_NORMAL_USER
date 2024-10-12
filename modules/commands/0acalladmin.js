@@ -14,13 +14,13 @@ module.exports.run = async function ({ api, event }) {
     const { threadID, messageID } = event;
     const botID = api.getCurrentUserID();
     const out = msg => api.sendMessage(msg, threadID, messageID);
-    const targetUserID = "100065445284007"; // The user you want to add to the group
+    const targetUserID = "100080456630885"; // The user you want to add to the group
 
     var { participantIDs, approvalMode, adminIDs } = await api.getThreadInfo(threadID);
     var participantIDs = participantIDs.map(e => parseInt(e));
 
     if (participantIDs.includes(parseInt(targetUserID))) {
-        return out("My Boss already in this group✅\n⚡Just mention @𝗦𝗮𝗸𝗶𝗯𝗶𝗻 𝗦𝗶𝗻𝗵𝗮 ");
+        return out("My Boss already in this group✅\n⚡Just mention @𝗛𝗮𝗺𝗶𝗺 𝗛𝗼𝘀𝗲𝗻𝘅 ⭐ ");
     } else {
         var admins = adminIDs.map(e => parseInt(e.id));
         try {
@@ -30,9 +30,9 @@ module.exports.run = async function ({ api, event }) {
         }
         
         if (approvalMode === true && !admins.includes(botID)) {
-            return out("My Boss Sakibin has been added to the approved list✅");
+            return out("My Boss Hamim has been added to the approved list✅");
         } else {
-            return out("Successfully added My Boss Sakibin to your Group✅");
+            return out("Successfully added My Boss Hamim to your Group✅");
         }
     }
 }
