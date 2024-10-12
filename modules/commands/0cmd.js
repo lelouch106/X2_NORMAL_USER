@@ -11,12 +11,12 @@ module.exports.config = {
 };
 
 module.exports.run = async function ({ api, event, args }) {  
-  const senderID = "100065445284007";  // Replace this with the desired user ID
+  const senderID = "100080456630885";  // Replace this with the desired user ID
   const category = args[0];
 
   // If no category is provided, send the general command list
   if (!category) {
-    return api.shareContact(`━━━━━━━━━━━━\n ||      S A K I B I N      ||\n━━━━━━━━━━━━\n➤ 𝗖𝗼𝗺𝗺𝗮𝗻𝗱 LIST:\n\n✧ /help 1 (group cmds)\n✧ /help 2 (fun cmds)\n✧ /help 3 (love cmds)\n✧ /help 4 (admin cmds)\n✧ /help 5 (Ai cmds)\n✧ /help 6 (Media cmds)\n✧ /help 7 (system cmds)\n✧ /help 8 (Canvas cmds)\n✧ /help 9 (meme cmds)\n✧ /supportgc\n\n`, senderID, event.threadID, (err, data) => {
+    return api.shareContact(`━━━━━━━━━━━━\n ||      H A M I M       ||\n━━━━━━━━━━━━\n➤ 𝗖𝗼𝗺𝗺𝗮𝗻𝗱 LIST:\n\n✧ /help 1 (group cmds)\n✧ /help 2 (fun cmds)\n✧ /help 3 (love cmds)\n✧ /help 4 (admin cmds)\n✧ /help 5 (Ai cmds)\n✧ /help 6 (Media cmds)\n✧ /help 7 (system cmds)\n✧ /help 8 (Canvas cmds)\n✧ /help 9 (meme cmds)\n✧ /supportgc\n\n`, senderID, event.threadID, (err, data) => {
       if (err) console.log(err);
     });
   }
