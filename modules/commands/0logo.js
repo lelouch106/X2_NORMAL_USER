@@ -92,7 +92,7 @@ ctx.shadowOffsetY = -20;
 
   return api.sendMessage(
     {
-      body: `✅Logo Edit Done, Your logo Details:\n💥Logo no: ${text1}\n💥Main Name: ${text2}\n💥2nd Name/uid: ${text3}\n🌈Color: ${color}\n🌡️API: 𝗦𝗮𝗸𝗶𝗯𝗶𝗻 𝗦𝗶𝗻𝗵𝗮`,
+      body: `✅Logo Edit Done, Your logo Details:\n💥Logo no: ${text1}\n💥Main Name: ${text2}\n💥2nd Name/uid: ${text3}\n🌈Color: ${color}\n🤖BOT : X2 BOT`,
       attachment: fs.createReadStream(pathImg)
     },
     event.threadID,
