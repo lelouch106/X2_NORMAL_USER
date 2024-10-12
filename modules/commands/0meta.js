@@ -2,7 +2,7 @@ const axios = require("axios");
 const API = global.config.ApiUrl;
 
 module.exports.config = {
-    name: "metax",
+    name: "meta",
     version: "1.0",
     hasPermission: 0,
     credits: "Sakibin",
@@ -16,7 +16,7 @@ module.exports.run = async ({ api, event, args }) => {
     try {
         let message = args.join(" ");
         if (!message) {
-            return api.sendMessage(`⭓ Hi, I'm Meta 2.0⚡\n⭓ My official Database created by @Sakibin Sinha 🚀`, event.threadID, (error, info) => {
+            return api.sendMessage(`⭓ Hi, I'm Meta 0.1⚡\n⭓ My official Database created by @Hamim Hosenx🚀`, event.threadID, (error, info) => {
                 global.client.handleReply.push({
                     name: this.config.name,
                     messageID: info.messageID,
@@ -26,7 +26,7 @@ module.exports.run = async ({ api, event, args }) => {
             }, event.messageID);
         }
 
-        const response = await axios.get(`${API}/sim?type=ask&ask=${message}`);
+        const response = await axios.get(`https://x2-api.onrender.com/sim?type=ask&ask=${message}`);
         const respond = response.data.answer;
         api.sendMessage(respond, event.threadID, (error, info) => {
             global.client.handleReply.push({
@@ -47,7 +47,7 @@ module.exports.handleReply = async function ({ event, api, handleReply }) {
         const message = event.body;
 
         try {
-            const response = await axios.get(`${API}/sim?type=ask&ask=${message}`);
+            const response = await axios.get(`https://x2-api.onrender.com/sim?type=ask&ask=${message}`);
             const respond = response.data.answer;
             api.sendMessage(respond, event.threadID, (error, info) => {
                 global.client.handleReply.push({
