@@ -10,7 +10,7 @@ module.exports.config = { usePrefix: true,
 
 module.exports.run = ({ event, api }) => api.sendMessage(`➤ 𝗖𝗼𝗺𝗺𝗮𝗻𝗱 LIST
  ━━━━━━━━━━━━
- ||      S A K B I N      ||
+ ||      H A M I M   ||
  ━━━━━━━━━━━━
  🈹Total commands: 617
  🈺Available page: 14
@@ -27,7 +27,8 @@ module.exports.run = ({ event, api }) => api.sendMessage(`➤ 𝗖𝗼𝗺𝗺�
 🟦 যেকোনো পেজ এর CMD দেখতে👇
 👉/help [page No.?] দিবেন!
 
-🪄Help Modules by SAKIBIN✨
+🪄Help Modules by X2 But Full Pack By Sakibin.
+Thank you Sakibin sir for giving this botfile to x2✨
 ╭────────────⭓
 │ 𝐍𝐨𝐭𝐞: 𝐓𝐡𝐚𝐧𝐤𝐬 𝐃𝐞𝐚𝐫 𝐔𝐬𝐞𝐫  🌺
 ╰────────────────✢`, event.threadID, event.messageID);
