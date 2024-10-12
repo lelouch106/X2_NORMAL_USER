@@ -17,7 +17,7 @@ module.exports.handleEvent = async function ({ api, event, args, Threads, Users 
   const { threadID, messageID, type, messageReply, body } = event;
   const userName = await Users.getNameUser(event.senderID);
 
-  const tl = ["এত ডাকাডাকি করো কেনো", "তুমারে রাইতে ভালোবাসি🥺", "I Love You Baby😘", "BOT is made by Sakibin!", "হ্যা বলো জান শুনতেচি☺️","Ki hoise jaan😒", "/call can add admin!", "Jaaan tumi onek cute🫣","Ask amr mon vlo nei🥲","Hmm jan ummah😘😘","/report can nok owner!","Ato dako kno lojja lage to..","How can I assist you today!","/help to see helplist!"];
+  const tl = ["এত ডাকাডাকি করো কেনো", "তুমারে রাইতে ভালোবাসি🥺", "I Love You Baby😘", "BOT is made by Hamim!", "হ্যা বলো জান শুনতেচি☺️","Ki hoise jaan😒", "/call can add admin!", "Jaaan tumi onek cute🫣","Ask amr mon vlo nei🥲","Hmm jan ummah😘😘","/report can nok owner!","Ato dako kno lojja lage to..","How can I assist you today!","/help to see helplist!"];
   var randrepl = tl[Math.floor(Math.random() * tl.length)];
 
   let question = '';
@@ -50,7 +50,7 @@ module.exports.handleEvent = async function ({ api, event, args, Threads, Users 
         },
         {
           role: "user",
-          content: "Sakibin is Programmer from Bangladesh, He completed programming language like html, css, bootstrap, node js, bash. Find him into facebook: https://fb.me/imsakibin007"
+          content: "Hamim is Programmer from Bangladesh, He completed programming language like html, css, bootstrap, node js, bash. Find him into facebook: https://fb.me/HACKER.HAMIM.BHAI"
         }
       ],
       prompt: question,
