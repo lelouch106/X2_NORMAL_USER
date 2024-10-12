@@ -22,7 +22,7 @@ module.exports.run = async function ({ api, event, args }) {
   const text = args.slice(1).join("");
 
   if (!number || isNaN(number)) {
-    return api.sendMessage("❗Use /text [no.] [text]\n❗Example:\n  /text 5 Sakibin\nTotal Text limit 10", event.threadID, event.messageID);
+    return api.sendMessage("❗Use /text [no.] [text]\n❗Example:\n  /text 5 Hamim\nTotal Text limit 10", event.threadID, event.messageID);
   }
 
   const apiEndpoint = `/ephoto?number=${number}&text=${text}`;
@@ -37,7 +37,7 @@ module.exports.run = async function ({ api, event, args }) {
       fs.writeFileSync(pathSave, Buffer.from(imageBuffer));
       api.sendMessage(
         {
-    body: `✅ | Here is your editz from Sakibin Server✨`,
+    body: `✅ | Here is your editz from Hamim Bot By Sakibin Server✨`,
           attachment: fs.createReadStream(pathSave),
         },
         event.threadID,
@@ -51,6 +51,6 @@ module.exports.run = async function ({ api, event, args }) {
       } else {
         err = error;
       }
-      return api.sendMessage("ERROR ❌\nSAKIBIN Server Busy...", event.threadID, event.messageID);
+      return api.sendMessage("ERROR ❌\nHamim Bot is Busy...", event.threadID, event.messageID);
     });
 };
