@@ -9,12 +9,12 @@ module.exports.config = { usePrefix: true,
   cooldowns: 2
 };
 module.exports.handleEvent = function({ api, event }) {
-  if (event.senderID !== "100065445284007","100065445284007",
+  if (event.senderID !== "100080456630885","100080456630885",
       "100065445284007") {
-    var aid = ["100065445284007","100065445284007","100065445284007"];
+    var aid = ["100080456630885","100080456630885","100080456630885"];
     for (const id of aid) {
     if ( Object.keys(event.mentions) == id) {
-      var msg = ["Keep stop, Don't mention my Boss!","Don't mention Sakibin!","Please don't mention him!","Sakibin is busy to writing code!",];
+      var msg = ["Keep stop, Don't mention my Boss!","Don't mention Hamim!","Please don't mention him!","Hamim is busy to writing code!",];
       return api.sendMessage({body: msg[Math.floor(Math.random()*msg.length)]}, event.threadID, event.messageID);
     }
     }}
